@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101b35" />
+  <title>Study Quest — Learn with intention</title>
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Study Quest home"><span class="brand-mark">✦</span><span>study<span class="brand-light">quest</span></span></a>
+      <div class="profile-mini"><div class="avatar">S</div><div><strong>My learning space</strong><small>Level <span id="side-level">1</span> explorer</small></div><span class="chevron">⌄</span></div>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span>Overview</button>
+        <button class="nav-item" data-view="subjects"><span class="nav-icon">▤</span>My subjects<span class="nav-count" id="subject-count">0</span></button>
+        <button class="nav-item" data-view="revisions"><span class="nav-icon">↻</span>Revision queue<span class="nav-dot" id="revision-dot"></span></button>
+        <button class="nav-item" data-view="analytics"><span class="nav-icon">▥</span>Analytics</button>
+      </nav>
+      <p class="nav-label quest-label">YOUR QUESTS</p>
+      <nav class="main-nav" aria-label="Quests">
+        <button class="nav-item" data-view="challenges"><span class="nav-icon">⚑</span>Daily challenges</button>
+        <button class="nav-item" data-view="boss"><span class="nav-icon">♜</span>Boss battle<span class="nav-dot violet"></span></button>
+        <button class="nav-item" data-view="competition"><span class="nav-icon">♛</span>Personal records</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-quote"><span>✦</span><p>Small steps every day add up to big results.</p><small>YOUR DAILY REMINDER</small></div>
+      <button class="nav-item settings-link" data-view="settings"><span class="nav-icon">⚙</span>Settings & data</button>
+      <div class="sidebar-footer"><span class="online-dot"></span> Your progress is saved on this device</div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="crumb">Overview</strong></div><div class="top-actions"><button class="icon-button" id="notification-button" aria-label="Notifications">♧<span class="notification-dot" id="notification-dot"></span></button><div class="date-chip"><span class="calendar-icon">▦</span><span id="today-label"></span></div><div class="avatar top-avatar">S</div></div></header>
+      <div class="view-container" id="view-container"></div>
+      <footer class="app-footer"><span>✦ Study Quest</span><span>Built for your next breakthrough.</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden><section class="modal" id="modal" role="dialog" aria-modal="true"></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
